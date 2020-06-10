@@ -1,13 +1,13 @@
 // console.log("hello");
 
 function phAnalyzer(ph){
-  if(ph === 12){
+  if(ph >= 8 && ph <= 14){
     return "alkaline";
-  } else if (ph === 4 ){
+  } else if (ph < 7){
     return "acidic";
   } else if (ph === 7){
     return "neutral";
-  } else if(ph === 25){
+  } else {
     return "invalid pH value";
   }
 }
