@@ -1,15 +1,14 @@
 
 function wordBuilder(wordToSpell){
 
-  var newWords = [];
-  var wordSplit = wordToSpell.split("");
-  var emptyString = "";
+  var stringWord = "";
+  var arr= [];
 
-  for(var i = 0; i < wordSplit.length; i++){
-    newWords.push(emptyString+= wordSplit[i]);
+  for(var i = 0; i < wordToSpell.length; i++){
+    stringWord += wordToSpell[i];
+    arr.push(stringWord);
   }
-  return newWords;
-
+  return arr;
 }
 
 console.log(wordBuilder("Javascript"));
