@@ -1,36 +1,43 @@
 function dayFinder(stringDate){
-  var newDate = new Date(stringDate);
-  var month = newDate.getMonth();
-  var date = newDate.getDate();
-  var year = newDate.getFullYear();
-  var day = newDate.getDay(); // return day as an integer from 0 -6
-
-  switch(day){
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    default:
-      day = "Saturday";
-  }
-
+  // note: getDay() --> return an integer from 0 - 6
+  // ------using arrays -----------
+  var arrDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var newDate = new Date(stringDate).getDay();
+  var day = arrDays[newDate]
   return day;
 
-// ----- or --- using if else statement ------
+
+  //------------- using switch statement ----------
+  // var newDate = new Date(stringDate);
+  // var day = newDate.getDay(); // .getDay() --> return day as an integer from 0 - 6
+
+  // switch(day){
+  //   case 0:
+  //     day = "Sunday";
+  //     break;
+  //   case 1:
+  //     day = "Monday";
+  //     break;
+  //   case 2:
+  //     day = "Tuesday";
+  //     break;
+  //   case 3:
+  //     day = "Wednesday";
+  //     break;
+  //   case 4:
+  //     day = "Thursday";
+  //     break;
+  //   case 5:
+  //     day = "Friday";
+  //     break;
+  //   default:
+  //     day = "Saturday";
+  // }
+
+  // return day;
+
+
+// ---------- or using if else statement ---------
   // if(day === 0 ){
   //   return "Sunday"
   // } else if (day === 1) {
