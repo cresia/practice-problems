@@ -1,22 +1,15 @@
 function pocketChangeCalculator(changeArray, itemCost){
-  var quarter = 0.25;
-  var dimes = 0.10;
-  var nickles =  0.05;
-  var pennies = 0.01;
+  var quarter = changeArray[0] * 0.25;
+  var dimes = changeArray[1] * 0.10;
+  var nickles = changeArray[2] * 0.05;
+  var pennies = changeArray[3] * 0.01;
 
-  for(var i= 0; i< changeArray[i]; i++){
-    var result1 = changeArray[0] * quarter;
-    var result2 = changeArray[1] * dimes;
-    var result3 = changeArray[2] * nickles;
-    var result4 = changeArray[3] * pennies;
-    var total = result1 + result2 + result3 + result4;
+  var total = quarter + dimes + nickles + pennies;
 
     if(total >= itemCost){
      return true
     }
     return false;
-  }
-
 }
 
 
