@@ -12,6 +12,21 @@ function applyDiscounts(priceArray, discount) {
 
 }
 
+//------- different solution ------------
+
+// function applyDiscounts(pricesArray, discount) {
+//   var percentage = '.';
+//   var result = []
+//   for (var i = 0; i < discount.length - 1; i++) {
+//     percentage += discount[i]
+//   }
+//   percentage = parseFloat(percentage)
+//   for (var x = 0; x < pricesArray.length; x++) {
+//     result.push(pricesArray[x] - pricesArray[x] * percentage)
+//   }
+//   return result
+// }
+
 
 
 applyDiscounts([10, 20, 30], "50%") // -> [5, 10, 15]
