@@ -10,8 +10,22 @@ function giftCalculator(numberOfDays) {
 
   }
 
-  console.log(arr.pop())
+  // console.log(arr.pop());
+  console.log(arr[arr.length-1]);
 
+}
+
+
+// ---- different solution ----
+
+function giftCalculator(numberOfDays) {
+  var giftTotal = null;
+  var multiplier = numberOfDays;
+  for (var index = 1; index <= numberOfDays; index++) {
+    giftTotal += (index * multiplier);
+    multiplier--
+  }
+  console.log(giftTotal);
 }
 
 
